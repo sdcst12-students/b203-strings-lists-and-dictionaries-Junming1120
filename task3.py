@@ -24,8 +24,8 @@ sortMe = {
     20: 3
   }
 
-keys = []
-values = []
+keys = sorted(list(sortMe.keys()))
+values = sorted(list(sortMe.values()))
 
 
 
