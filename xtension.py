@@ -36,3 +36,24 @@ You have:
  3 wood
  >
 """
+inventory = {"food":0,"water":0,"rope":0,"torch":0,"sack":0,"wood":0,"iron":0,"steel":0,"ginger":0,"Garlic":0,"fish":0,"stone":0,"wood":0}
+
+
+while True:
+    x=input()
+    xList=x.split(" ")
+    if xList[0]=="get":
+        if xList[1].isdigit():
+            inventory[xList[2]]+=int(xList[1])
+        else:
+            inventory[xList[1]]+=1
+    elif xList[0]=="remove":
+        if xList[1].isdigit():
+            inventory[xList[2]]-=int(xList[1])
+        else:
+            inventory[xList[1]]-=1
+    elif xList[0]=="show":
+        for i in range(len(inventory)):
+            print(str(list(inventory.values())[i]))
+            print(str(list(inventory.keys())[i]))
+
